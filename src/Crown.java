@@ -10,7 +10,7 @@ public class Crown implements Headgear {
     /**
      * Constant value factor per jewel.
      */
-    private static final int FIXED_VALUE_FACTOR = 200000;
+    private static final double FIXED_VALUE_FACTOR = 200000.0;
 
     /**
      * Declares instant variable that stores the number of jewels in the crown.
