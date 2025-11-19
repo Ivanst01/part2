@@ -6,11 +6,10 @@
  */
 public abstract class ProtectiveHeadgear implements Headgear {
 
-     /**
+    /**
      * Declares instance variable that stores the protection factor of the headgear.
      */
     private double protectionFactor;
-
     
     /* Constructors */
     /**
@@ -19,7 +18,6 @@ public abstract class ProtectiveHeadgear implements Headgear {
      * @param protectionFactor must be a non-negative number.
      * @throws IllegalArgumentException if protectionFactor is negative.
      */
-
     public ProtectiveHeadgear(double protectionFactor) {
         if (protectionFactor < 0) {
             throw new IllegalArgumentException("Protection factor must be a non-negative number.");
@@ -35,5 +33,13 @@ public abstract class ProtectiveHeadgear implements Headgear {
      */
     public double getProtectionFactor() {
         return this.protectionFactor;
+    }
+
+    /**
+     * Returns a string representation of the attributes of this ProtectiveHeadgear
+     */
+    @Override
+    public String toString() {
+        return "protectionFactor=" + protectionFactor;
     }
 }

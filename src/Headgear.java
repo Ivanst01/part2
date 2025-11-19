@@ -12,6 +12,5 @@ public interface Headgear {
      * 
      * @return value in GBP
      */
-
     double getValue();
 }

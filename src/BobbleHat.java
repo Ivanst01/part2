@@ -23,7 +23,6 @@ public class BobbleHat extends ProtectiveHeadgear {
      * @param diameterInMm must be a non-negative number.
      * @throws IllegalArgumentException if protectionFactor or diameterInMm are negative.
      */
-
     public BobbleHat(double protectionFactor, int diameterInMm) {
         super(protectionFactor);
         if (diameterInMm < 0) {
@@ -31,7 +30,6 @@ public class BobbleHat extends ProtectiveHeadgear {
         }
         this. diameterInMm = diameterInMm;
     }
-
 
     /**
      * Implementation of the Headgear interface method
@@ -43,5 +41,12 @@ public class BobbleHat extends ProtectiveHeadgear {
         return diameterInMm * MULTIPLIER * getProtectionFactor() ;
     }
 
-    
+    /**
+     * Returns a string representation of the attributes of this Bobblehat
+     */
+    @Override
+    public String toString() {
+        return "Bobblehat{" + super.toString() + ", diameterInMm=" + diameterInMm + ", value=" + getValue() + "}";
+    }
+
 }

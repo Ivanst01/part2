@@ -40,6 +40,12 @@ public class ScooterHelmet extends ProtectiveHeadgear {
         int c1 = hasVisor ? 160 : 80;
         return c1 + getProtectionFactor() * C2;
     }
-
     
+    /**
+     * Returns a string representation of the attributes of this Scooter Helmet
+     */
+    @Override
+    public String toString() {
+        return "ScooterHelmet{" + super.toString() + ", hasVisor=" + hasVisor + ", value=" + getValue() + "}";
+    }
 }

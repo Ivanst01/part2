@@ -4,7 +4,6 @@
  * @author Ivan Stolnic
  */
 
-
 public class Crown implements Headgear {
 
     /**
@@ -18,14 +17,12 @@ public class Crown implements Headgear {
     private int numberOfJewels;
 
     /* Constructors */
-
     /**
      * Constructs a crown with a given number of jewels.
      * 
      * @param numberOfJewels must be a non-negative number.
      * @throws IllegalArgumentException if numberOfJewels is negative.
      */
-
     public Crown(int numberOfJewels) {
         if (numberOfJewels < 0) {
             throw new IllegalArgumentException("Number of jewels must be a non-negative number.");
@@ -43,6 +40,11 @@ public class Crown implements Headgear {
         return numberOfJewels * FIXED_VALUE_FACTOR;
     }
 
-    
-
+    /**
+     * Returns a string representation of this Crown
+     */
+    @Override
+    public String toString() {
+        return "Crown{numberOfJewels=" + numberOfJewels + ", value=" + getValue() + "}";
+    }
 }
