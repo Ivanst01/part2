@@ -1,5 +1,5 @@
 /**
- * A crown is a piece of headgear which value  is determined by its number of jewels
+ * A crown is a piece of headgear whose value is determined by its number of jewels it contains
  * 
  * @author Ivan Stolnic
  */
@@ -8,12 +8,12 @@
 public class Crown implements Headgear {
 
     /**
-     * Constant value factor per jewel.
+     * Constant value factor per jewel in GBP.
      */
     private static final double FIXED_VALUE_FACTOR = 200000.0;
 
     /**
-     * Declares instant variable that stores the number of jewels in the crown.
+     * Declares instance variable that stores the number of jewels in this crown.
      */
     private int numberOfJewels;
 
@@ -34,8 +34,8 @@ public class Crown implements Headgear {
     }
 
     /**
-     * Implementation of the Headgear interface method
-     * Calculates the value of the crown using its number of jewels.
+     * Implementation of the Headgear interface method.
+     * Calculates the value of this crown using its number of jewels.
      * @return value in GBP
      */
     @Override

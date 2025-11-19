@@ -1,19 +1,18 @@
 /**
- * Abstract class for all protective headgears.
- * Stores the common protective features.
+ * Abstract superclass for all types of protective headgears.
+ * Stores and validates the common protective features for all subclasses.
  * 
- * @author Ivan Stlnic
+ * @author Ivan Stolnic
  */
 public abstract class ProtectiveHeadgear implements Headgear {
 
      /**
-     * Declares instant variable that stores the protection factor.
+     * Declares instance variable that stores the protection factor of the headgear.
      */
     private double protectionFactor;
 
     
     /* Constructors */
-
     /**
      * Constructs a ProtectiveHeadgear with a given protection factor.
      * 
@@ -30,7 +29,7 @@ public abstract class ProtectiveHeadgear implements Headgear {
 
     /*Accessor method */
     /**
-     * Returns the protection factor of ProtectiveHeadgear that can be called in other classes.
+     * Returns the protection factor of this ProtectiveHeadgear that can be called in other classes.
      * 
      * @return protection factor;
      */
