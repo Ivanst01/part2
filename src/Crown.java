@@ -33,11 +33,16 @@ public class Crown implements Headgear {
         this.numberOfJewels = numberOfJewels;
     }
 
-
+    /**
+     * Implementation of the Headgear interface method
+     * Calculates the value of the crown using its number of jewels.
+     * @return value in GBP
+     */
     @Override
     public double getValue() {
         return numberOfJewels * FIXED_VALUE_FACTOR;
     }
 
+    
 
 }
