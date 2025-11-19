@@ -17,7 +17,7 @@ public abstract class ProtectiveHeadgear implements Headgear {
     /**
      * Constructs a ProtectiveHeadgear with a given protection factor.
      * 
-     * @param protectionFactor must be a positive number.
+     * @param protectionFactor must be a non-negative number.
      * @throws IllegalArgumentException if protectionFactor is negative.
      */
 
@@ -26,5 +26,15 @@ public abstract class ProtectiveHeadgear implements Headgear {
             throw new IllegalArgumentException("Protection factor must be a non-negative number.");
         }
         this.protectionFactor = protectionFactor;
+    }
+
+    /*Accessor method */
+    /**
+     * Returns the protection factor of ProtectiveHeadgear that can be called in other classes.
+     * 
+     * @return protection factor;
+     */
+    public double getProtectionFactor() {
+        return this.protectionFactor;
     }
 }

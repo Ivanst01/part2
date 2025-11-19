@@ -22,13 +22,13 @@ public class Crown implements Headgear {
     /**
      * Constructs a crown with a given number of jewels.
      * 
-     * @param numberOfJewels must be a positive number.
+     * @param numberOfJewels must be a non-negative number.
      * @throws IllegalArgumentException if numberOfJewels is negative.
      */
 
     public Crown(int numberOfJewels) {
         if (numberOfJewels < 0) {
-            throw new IllegalArgumentException("Number of jewels must be a positive number.");
+            throw new IllegalArgumentException("Number of jewels must be a non-negative number.");
         }
         this.numberOfJewels = numberOfJewels;
     }
