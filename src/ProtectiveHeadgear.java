@@ -19,10 +19,7 @@ public abstract class ProtectiveHeadgear implements Headgear {
      * @throws IllegalArgumentException if protectionFactor is negative.
      */
     public ProtectiveHeadgear(double protectionFactor) {
-        if (protectionFactor < 0) {
-            throw new IllegalArgumentException("Protection factor must be a non-negative number.");
-        }
-        this.protectionFactor = protectionFactor;
+        setProtectionFactor(protectionFactor);
     }
 
     /*Accessor method */
@@ -33,6 +30,21 @@ public abstract class ProtectiveHeadgear implements Headgear {
      */
     public double getProtectionFactor() {
         return this.protectionFactor;
+    }
+
+    /**
+     * Mutator method.
+     * Sets the protection factor of of this protective headwear amd
+     * validates only non-negative input.
+     * 
+     * @param protectionFactor must be a non-negative number.
+     * @throws IllegalArgumentException if protectionFactor is negative.
+     */
+    public void setProtectionFactor(double protectionFactor) {
+        if (protectionFactor < 0) {
+            throw new IllegalArgumentException("Protection factor must be a non-negative number.");
+        }
+        this.protectionFactor = protectionFactor;
     }
 
     /**
