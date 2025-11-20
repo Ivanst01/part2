@@ -24,11 +24,33 @@ public class BobbleHat extends ProtectiveHeadgear {
      * @throws IllegalArgumentException if protectionFactor or diameterInMm are negative.
      */
     public BobbleHat(double protectionFactor, int diameterInMm) {
-        super(protectionFactor);
+        super(protectionFactor); // protectionFactor is validated by superclass and IllegalArgumentException is thrown by superclass
+        setDiameterInMm(diameterInMm);
+    }
+
+     /*Accessor method */
+    /**
+     * Returns the diameter of the Bobble. 
+     * 
+     * @return diameter in milimetres;
+     */
+    public double getDiameterInMm() {
+        return this.diameterInMm;
+    }
+
+    /**
+     * Mutator method.
+     * Sets the diameter of this bobble hat and 
+     * validates only non-negative input.
+     * 
+     * @param diameterInMm must be a non-negative number.
+     * @throws IllegalArgumentException if diameterInMm is negative.
+     */
+    public void setDiameterInMm(int diameterInMm) {
         if (diameterInMm < 0) {
             throw new IllegalArgumentException("Diameter must be a non-negative number.");
         }
-        this. diameterInMm = diameterInMm;
+        this.diameterInMm = diameterInMm;
     }
 
     /**
