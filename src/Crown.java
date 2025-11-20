@@ -24,6 +24,28 @@ public class Crown implements Headgear {
      * @throws IllegalArgumentException if numberOfJewels is negative.
      */
     public Crown(int numberOfJewels) {
+        setJewelNumber(numberOfJewels);
+    }
+
+    /**
+     * Accessor method
+     * Returns the number of jewels
+     * 
+     * @return number of jewels
+     */
+    public int getJewels() {
+        return numberOfJewels;
+    }
+
+    /**
+     * Mutator method.
+     * Sets the number of jewels in this crown and 
+     * validates only non-negative input.
+     * 
+     * @param numberOfJewels must be non-negative number.
+     * @throws IllegalArgumentException if numberOfJewels is negative.
+     */
+    public void setJewelNumber(int numberOfJewels) {
         if (numberOfJewels < 0) {
             throw new IllegalArgumentException("Number of jewels must be a non-negative number.");
         }
