@@ -25,7 +25,27 @@ public class ScooterHelmet extends ProtectiveHeadgear {
      */
 
     public ScooterHelmet(double protectionFactor, boolean hasVisor) {
-        super(protectionFactor);
+        super(protectionFactor); // protectionFactor is validated by superclass and IllegalArgumentException is thrown by superclass
+        hasVisor();
+    }
+
+    /*Accessor method */
+    /**
+     * Returns boolean value wether the helmet has a visor.
+     * 
+     * @return true if helmet has a visor, otherwise false;
+     */
+    public boolean hasVisor() {
+        return this.hasVisor;
+    }
+
+    /**
+     * Mutator method.
+     * Sets the value of the helmet visor.
+     * 
+     * @param hasVisor true if helmet has a visor.
+     */
+    public void setHasVisor(boolean hasVisor) {
         this.hasVisor = hasVisor;
     }
 
@@ -37,7 +57,7 @@ public class ScooterHelmet extends ProtectiveHeadgear {
      */
     @Override
     public double getValue() {
-        int c1 = hasVisor ? 160 : 80;
+        int c1 = hasVisor() ? 160 : 80;
         return c1 + getProtectionFactor() * C2;
     }
     
@@ -46,6 +66,6 @@ public class ScooterHelmet extends ProtectiveHeadgear {
      */
     @Override
     public String toString() {
-        return "ScooterHelmet{" + super.toString() + ", hasVisor=" + hasVisor + ", value=" + getValue() + "}";
+        return "ScooterHelmet{" + super.toString() + ", hasVisor=" + hasVisor() + ", value=" + getValue() + "}";
     }
 }
